@@ -11,6 +11,7 @@
 		0CBFAFCD2AEA7508006584CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFAFCC2AEA7508006584CA /* ContentView.swift */; };
 		0CBFAFCF2AEA7509006584CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBFAFCE2AEA7509006584CA /* Assets.xcassets */; };
 		0CBFAFD22AEA7509006584CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBFAFD12AEA7509006584CA /* Preview Assets.xcassets */; };
+		0CBFAFD92AEA76D2006584CA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFAFD82AEA76D2006584CA /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		0CBFAFCC2AEA7508006584CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CBFAFCE2AEA7509006584CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CBFAFD12AEA7509006584CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0CBFAFD82AEA76D2006584CA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		0CBFAFDA2AEA9835006584CA /* WebView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebView.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,10 @@
 		0CBFAFC92AEA7508006584CA /* WebView */ = {
 			isa = PBXGroup;
 			children = (
+				0CBFAFDA2AEA9835006584CA /* WebView.entitlements */,
 				0CBFAFCA2AEA7508006584CA /* WebViewApp.swift */,
 				0CBFAFCC2AEA7508006584CA /* ContentView.swift */,
+				0CBFAFD82AEA76D2006584CA /* WebView.swift */,
 				0CBFAFCE2AEA7509006584CA /* Assets.xcassets */,
 				0CBFAFD02AEA7509006584CA /* Preview Content */,
 			);
@@ -139,6 +144,7 @@
 			files = (
 				0CBFAFCD2AEA7508006584CA /* ContentView.swift in Sources */,
 				0CBFAFCB2AEA7508006584CA /* WebViewApp.swift in Sources */,
+				0CBFAFD92AEA76D2006584CA /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebView/WebView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebView/Preview Content\"";
@@ -298,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WebView/WebView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WebView/Preview Content\"";
