@@ -20,27 +20,8 @@ struct ContentView: View {
 
                 Spacer()
 
-                Text("Retrieve the Cart ID from Safari or the lastminute.com app and paste it below to open the Checkout WebView")
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom)
-
-                TextField("Cart ID", text: $cartID)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom)
-
-                NavigationLink(destination: WebView(cartID: cartID)) {
-                    Text("Open Checkout")
-                }
-                    .buttonStyle(.borderedProminent)
-
-                Spacer()
-
-                Text("Open the lastminute.com home without a specific checkout instance")
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom)
-
                 NavigationLink(destination: WebView()) {
-                    Text("Open Home")
+                    Text("Open Sample Page")
                 }
                 .buttonStyle(.bordered)
 

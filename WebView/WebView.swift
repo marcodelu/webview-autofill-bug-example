@@ -9,19 +9,10 @@ import SwiftUI
 import WebKit
 
 struct WebView: UIViewRepresentable {
-    private let basePathCheckout = "https://secure.lastminute.com/hdp/checkout/carts/";
-    private let basePathHome = "https://lastminute.com";
-    let cartID: String?;
-
-    init(cartID: String? = nil) {
-        self.cartID = cartID
-    }
+    private let basePath = "https://marcodelucchi.com/autofill-bug";
 
     private func buildCheckoutURL() -> URL {
-        if let cartID = cartID {
-            return URL(string: basePathCheckout + cartID)!
-        }
-        return URL(string: basePathHome)!
+        return URL(string: basePath)!
     }
 
     func makeCoordinator() -> Coordinator {
