@@ -9,11 +9,19 @@ import SwiftUI
 import WebKit
 
 struct WebView: UIViewRepresentable {
-    private let basePath = "https://secure.lastminute.com/hdp/checkout/carts/";
-    let cartID: String;
+    private let basePathCheckout = "https://secure.lastminute.com/hdp/checkout/carts/";
+    private let basePathHome = "https://lastminute.com";
+    let cartID: String?;
+
+    init(cartID: String? = nil) {
+        self.cartID = cartID
+    }
 
     private func buildCheckoutURL() -> URL {
-        return URL(string: basePath + cartID)!
+        if let cartID = cartID {
+            return URL(string: basePathCheckout + cartID)!
+        }
+        return URL(string: basePathHome)!
     }
 
     func makeCoordinator() -> Coordinator {
@@ -24,6 +32,7 @@ struct WebView: UIViewRepresentable {
         let webView = WKWebView()
         webView.navigationDelegate = context.coordinator
         webView.load(URLRequest(url: buildCheckoutURL()))
+        webView.isInspectable = true
         return webView
     }
 

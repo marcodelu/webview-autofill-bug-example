@@ -29,9 +29,20 @@ struct ContentView: View {
                     .padding(.bottom)
 
                 NavigationLink(destination: WebView(cartID: cartID)) {
-                    Text("Open")
+                    Text("Open Checkout")
                 }
                     .buttonStyle(.borderedProminent)
+
+                Spacer()
+
+                Text("Open the lastminute.com home without a specific checkout instance")
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
+
+                NavigationLink(destination: WebView()) {
+                    Text("Open Home")
+                }
+                .buttonStyle(.bordered)
 
                 Spacer()
 
